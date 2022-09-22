@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>JOKENPÔ</title>
+</head>
+<body>
+    <section class="main">
+        <div class="container">
+            <h1 class="titulo-container">JOKENPÔ</h1>
+            <button class="btn-iniciar">Iniciar Game</button>
+        </div>
+
+        <div class="game">
+            <h2>Escolha sua próxima jogada</h2>
+            <p>Pode ser 'Pedra', 'Papel' ou 'Tesoura'</p>
+            <div class="label-input">
+                <label id="label-p" for="">Escolha sua próxima jogada 👇</label>
+                <div class="input-buttons">
+                    <input id="ja" type="button" value="Pedra">
+                    <input id="ken"   type="button" value="Papel">
+                    <input id="gu" type="button" value="Tesoura">
+                    <p class="cpu-played"></p>
+                    <p class="result"></p>
+                    <input type="button" class="btn-playAgain" value="Jogar Novamente"></input>
+                </div>
+            </div>
+        </div>
+        
+            <footer class="rodape">
+                <p>Desenvolvido por <a href="https://github.com/vinicius-soares-dev" target="_blank"><abbr title="Visitar GitHub">Vinicius Soares</abbr></a></p>
+            </footer>
+    </section>
+
+    <script src="assets/js/jokenpo.js"></script>
+</body>
+</html>
