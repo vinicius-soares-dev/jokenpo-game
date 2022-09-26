@@ -1,28 +1,26 @@
 const cpu = ['pedra', 'papel', 'tesoura'];
 const randCpu = cpu[Math.floor(Math.random() * cpu.length)];
-
-
-const btnIniciar = document.querySelector('.btn-iniciar');
-
-btnIniciar.addEventListener('click', (e) => {
-    e.preventDefault();
-
-    const container = document.querySelector('.container');
-    container.style.display = 'none';
-    displayAltera();
-});
-
-function  displayAltera() {
-    const gameDisplay = document.querySelector('.game');
-    gameDisplay.style.display = 'block';
-}
-
 const pedra = document.querySelector('#ja');
 const papel = document.querySelector('#ken');
 const tesoura = document.querySelector('#gu');
 const labelP = document.querySelector('#label-p');
 const cpuPlayed = document.querySelector('.cpu-played');
 const result = document.querySelector('.result');
+const playAgain = document.querySelector('.btn-playAgain');
+const btnIniciar = document.querySelector('.btn-iniciar');
+const gameDisplay = document.querySelector('.game');
+const container = document.querySelector('.container');
+
+
+function  displayAltera() {
+    gameDisplay.style.display = 'block';
+};
+
+btnIniciar.addEventListener('click', (e) => {
+    e.preventDefault();
+    container.style.display = 'none';
+    displayAltera();
+});
 
 pedra.addEventListener('click', (e) => {
     e.preventDefault();
@@ -53,7 +51,7 @@ tesoura.addEventListener('click', (e) => {
 
 function pedraCheck() {
     cpuPlayed.innerHTML = "CPU está jogando aguarde...";
-
+    
     setTimeout(() => {
         if(randCpu == 'pedra') {
             cpuPlayed.innerHTML = 'CPU JOGOU PEDRA';
@@ -114,12 +112,11 @@ function papelCheck() {
     }, 6000);
 };
 
-const playAgain = document.querySelector('.btn-playAgain');
+function newGame() {
+    playAgain.style.display = 'block';
+};
+
 
 playAgain.addEventListener('click', () => {
     window.location.reload();
 });
-
-function newGame() {
-    playAgain.style.display = 'block';
-}
